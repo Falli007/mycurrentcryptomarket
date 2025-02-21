@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Select Crypto</title>
+
+    <!-- 32x32 Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='favicon-32x32.png') }}"
+    />
+
+    <!-- 16x16 Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='favicon-16x16.png') }}"
+    />
+
+    <!-- Apple Touch Icon (for iOS) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='apple-touch-icon.png') }}"
+    />
+
+    <!-- .ico file (some browsers still use it) -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+    <!-- Web App Manifest (optional) -->
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='site.webmanifest') }}"
+    />
+  <head>
+    <meta charset="utf-8">
+    <title>Select Crypto</title>
+  </head>
+  <body>
+    <h1>Select a Cryptocurrency to Forecast</h1>
+    <form method="POST">
+      <select name="crypto">
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="LTC">Litecoin (LTC)</option>
+      </select>
+
+      <br><br>
+      <label for="investment">Investment Amount ($):</label>
+      <input type="number" name="investment" step="0.01" required>
+      
+      <button type="submit">Forecast</button>
+    </form>
+  </body>
+</html>
